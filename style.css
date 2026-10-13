@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #eef2ff;
+    color: #1e293b;
+}
+
+.app {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px #00000015;
+}
+
+h1 {
+    text-align: center;
+    color: #4f46e5;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+.stats {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.stat-card {
+    flex: 1;
+    padding: 12px 5px;
+    text-align: center;
+    background: #eef2ff;
+    border-radius: 10px;
+}
+
+.stat-card h3 {
+    margin: 5px;
+    font-size: 24px;
+    color: #4f46e5;
+}
+
+.stat-card p {
+    margin: 5px;
+    font-size: 13px;
+}
+
+#taskForm {
+    display: flex;
+    gap: 10px;
+}
+
+#taskInput {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+button {
+    padding: 11px 14px;
+    border: none;
+    border-radius: 8px;
+    background: #4f46e5;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3730a3;
+}
+
+.filters {
+    display: flex;
+    gap: 8px;
+    margin: 20px 0;
+}
+
+.filters button {
+    flex: 1;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+.task-item.completed {
+    opacity: 0.65;
+    text-decoration: line-through;
+}
+
+.delete-btn {
+    flex-shrink: 0;
+    background: #dc2626;
+}
+
+#emptyMessage {
+    text-align: center;
+    color: #64748b;
+}
+
+@media (max-width: 480px) {
+    .app {
+        padding: 15px;
+    }
+
+    .stats {
+        gap: 5px;
+    }
+
+    #taskForm {
+        flex-wrap: wrap;
+    }
+
+    #taskInput {
+        width: 100%;
+    }
+
+    .filters button {
+        padding: 10px 5px;
+    }
+}
